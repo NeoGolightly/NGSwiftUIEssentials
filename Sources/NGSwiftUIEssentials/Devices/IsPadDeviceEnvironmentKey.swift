@@ -8,20 +8,20 @@
 import SwiftUI
 
 @available(iOS 17.0, *)
-struct IsPadeDeviceEnvironmentKey: EnvironmentKey {
+struct IsPadDeviceEnvironmentKey: EnvironmentKey {
   static var defaultValue: Bool = false
 }
 
 @available(iOS 17.0, *)
 public extension EnvironmentValues {
   var isPadDevice: Bool {
-    get { self[IsPadeDeviceEnvironmentKey.self] }
-    set { self[IsPadeDeviceEnvironmentKey.self] = newValue }
+    get { self[IsPadDeviceEnvironmentKey.self] }
+    set { self[IsPadDeviceEnvironmentKey.self] = newValue }
   }
 }
 
 #if os(iOS)
-extension IsPadeDeviceEnvironmentKey: UITraitBridgedEnvironmentKey{
+extension IsPadDeviceEnvironmentKey: UITraitBridgedEnvironmentKey{
   static func read(from traitCollection: UITraitCollection) -> Bool {
     return traitCollection.userInterfaceIdiom == .pad
   }
