@@ -9,7 +9,7 @@ import SwiftUI
 
 @available(iOS 17.0, *)
 struct IsPhoneDeviceEnvironmentKey: EnvironmentKey {
-  static var defaultValue: Bool = false
+  static let defaultValue: Bool = false
 }
 
 @available(iOS 17.0, *)

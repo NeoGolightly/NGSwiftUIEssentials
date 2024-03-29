@@ -9,6 +9,7 @@ import SwiftUI
 
 public extension View {
   /// Embeds the view in a `NavigationStack`
+  @MainActor
   func embedInNavigationStack() -> some View {
     NavigationStack{ self }
   }
@@ -16,6 +17,7 @@ public extension View {
   /// Embeds the view in a `NavigationStack`
   /// - Parameter path: A `Binding` to the navigation state for this stack.
   /// - Returns: A view embaded in a `NavigationStack`
+  @MainActor
   func embedInNavigationStack(path: Binding<NavigationPath>) -> some View {
     NavigationStack(path: path){ self }.bold()
   }
@@ -23,6 +25,7 @@ public extension View {
   /// Embeds the view in a `NavigationStack`
   /// - Parameter path: A `Binding` to the navigation state for this stack.
   /// - Returns: A view embaded in a `NavigationStack`
+  @MainActor
   func embedInNavigationStack(path: Binding<Data>) -> some View {
     NavigationStack(path: path){ self }
   }
