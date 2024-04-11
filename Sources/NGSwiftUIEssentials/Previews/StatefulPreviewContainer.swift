@@ -16,7 +16,11 @@ public struct StatefulPreviewContainer<Value, Content: View>: View {
     content($value)
   }
   
+<<<<<<< HEAD
+  public init(_ value: Value, content: @escaping (Binding<Value>) -> Content) {
+=======
   init(_ value: Value, content: @escaping (Binding<Value>) -> Content) {
+>>>>>>> 6380901 (Added StatefulPreviewContainer for Previews)
     self._value = State(wrappedValue: value)
     self.content = content
   }
